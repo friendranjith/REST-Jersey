@@ -18,7 +18,7 @@ public class RestTest {
 	}
 	
 	@GET
-	@Path("/version")
+	@Path("/version")     //route to specific method
 	@Produces(MediaType.TEXT_HTML)
 	public String returnVersion(){
 		return "Version : "+VERSION;
