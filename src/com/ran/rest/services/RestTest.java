@@ -5,10 +5,11 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/helloworld")
+@Path("/helloworld") //route to Java class
 public class RestTest {
 	
-	private static final String NAME = "Ranjith";
+	//version of Jersey API
+	private static final String VERSION = "1.19.1";
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
@@ -17,9 +18,9 @@ public class RestTest {
 	}
 	
 	@GET
-	@Path("/greeting")
+	@Path("/version")
 	@Produces(MediaType.TEXT_HTML)
-	public String returnJSONString(){
-		return "Hello "+NAME;
+	public String returnVersion(){
+		return "Version : "+VERSION;
 	}
 }
